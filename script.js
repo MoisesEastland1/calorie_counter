@@ -15,3 +15,7 @@ let isError = false;
        // cleanStrArray.push(strArray[i]);
    // }
 //}
+function cleanInputString(str){
+    const regex = /[+-\s]/g;
+    return str.replace(regex, '');
+}
