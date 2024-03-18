@@ -24,3 +24,14 @@ function isValidInput(str){
     const regex = /\d+e\+d/i;
     return str.match(regex);
 }
+
+function addEntry(){
+    const targetInputContainer= document.querySelectorAll(`#${entryDropdown.value}.input-container`);
+    const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
+    const HTMLString = `
+    <label for ="${entryDropdown.value}-${entryNumber}-name">Entry ${entryNumber}Name</label>
+    <input type="Name />
+    <label for="${entryDropdown.value}-${entryNumber}-calories">Entry ${entryNumber} Calories</label>
+    <input type="number" min="0" id="${entryDropdown.value}-${entryNUmber}-calories placeholder="Calories"/>`
+    targetInputContainer.innerHTML += HTMLString;
+}
